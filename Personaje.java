@@ -1,7 +1,5 @@
 package Juego;
 
-import java.awt.Rectangle;
-
 import javax.swing.JPanel;
 
 public class Personaje {
@@ -40,7 +38,5 @@ public class Personaje {
 	public JPanel getPanel() {
 		return this.MiJP;
 	}
-	public Rectangle hitbox() {
-		return new Rectangle(x,y,60,60);
-	}
+	
 }

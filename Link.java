@@ -4,9 +4,9 @@ import javax.swing.JPanel;
 
 public class Link extends Personaje{
 	
-	protected  int vida;
-	protected  int escudo;
-	protected  int arma;
+	protected int vida;
+	protected int escudo;
+	protected int arma;
 	
 	Link(JPanel MiJ, int s, int e, int a){
 		super(MiJ);

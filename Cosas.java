@@ -1,7 +1,5 @@
 package Juego;
 
-import java.awt.Rectangle;
-
 import javax.swing.JPanel;
 
 public class Cosas {
@@ -10,8 +8,8 @@ public class Cosas {
 	private JPanel MiOb;
 	
 	Cosas(JPanel MiO){
-		this.x=(int)(Math.random()*700);
-		this.y=(int)(Math.random()*500);
+		this.x=(int)(Math.random()*600);
+		this.y=(int)(Math.random()*300);
 		this.MiOb=MiO;
 	}
 	
@@ -32,9 +30,7 @@ public class Cosas {
 	public JPanel getPanel() {
 		return this.MiOb;
 	}
-	public Rectangle hitbox() {
-		return new Rectangle(x,y,60,60);
-	}
+	
 	
 
 }

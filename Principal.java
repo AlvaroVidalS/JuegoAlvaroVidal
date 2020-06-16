@@ -33,6 +33,7 @@ public class Principal extends JFrame {
 	 * Launch the application.
 	 */
 	public static void main(String[] args) {
+		
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
@@ -70,20 +71,20 @@ public class Principal extends JFrame {
 			@Override
 			public void mouseClicked(MouseEvent arg0) {
 				try {
-					MiJuego frame = new MiJuego();
-					frame.setVisible(true);
 					Clip sonido = AudioSystem.getClip();
 					sonido.open(AudioSystem.getAudioInputStream(new File("src/juego/ringtones-tema-zelda.wav")));
 					sonido.start();
+					MiJuego frame = new MiJuego(sonido);
+					frame.setVisible(true);
+					dispose();
+					
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
 			}
 		});
 		
-		JComboBox comboBox = new JComboBox();
-		comboBox.addItem("Facil");
-		comboBox.addItem("Dificil");
+		
 		
 		
 		
@@ -109,7 +110,7 @@ public class Principal extends JFrame {
 					.addGap(82))
 				.addGroup(Alignment.TRAILING, gl_contentPane.createSequentialGroup()
 					.addContainerGap(345, Short.MAX_VALUE)
-					.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, 96, GroupLayout.PREFERRED_SIZE)
+					
 					.addGap(69))
 		);
 		gl_contentPane.setVerticalGroup(
@@ -125,7 +126,6 @@ public class Principal extends JFrame {
 							.addGap(27)
 							.addComponent(lblNewLabel)))
 					.addGap(3)
-					.addComponent(comboBox, GroupLayout.PREFERRED_SIZE, GroupLayout.DEFAULT_SIZE, GroupLayout.PREFERRED_SIZE)
 					.addGap(35)
 					.addComponent(btnComenzar)
 					.addContainerGap(30, Short.MAX_VALUE))
